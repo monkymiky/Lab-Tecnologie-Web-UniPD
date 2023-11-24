@@ -227,7 +227,7 @@ main>p{
     margin-bottom: 1em;
 }
 /*------- Discografia ------------------------------------------------------------------------------------------*/
-div.colonne{
+#discografia{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -235,17 +235,36 @@ div.colonne{
     max-width: 1024px;
     margin: auto;
 }
-div.colonne div{
+#discografia li {
+    display: block;
     width: 15em;
     height: 15em;
-    text-indent: -999em;
-    background-image: url(../images/fuorihype.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:contain;
+    list-style-type: none;
     margin-bottom: 1em;
 }
-
+#discografia li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    overflow: hidden;
+    font-size: 7em;
+    line-height: 1.5em;
+}
+#discografia li a:link{
+    filter:grayscale(100%);
+    transition: .5s;
+}
+#discografia li a:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.FuoriDallHype{
+    background-image: url(../images/fuorihype.jpg);
+}
 /********************************************
 *
 *Footer
