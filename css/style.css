@@ -1,0 +1,260 @@
+/*meglio fare un unico file css per tutte le pagine, tanto non pesa tanto ed è più il tempo di risposta del server ad incidere*/
+*{ 
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --headerBgColor: #000; /*e altre variabili globali*/
+    --headerTextColor: #FFF;
+
+    --BgColor: rgba(0,0,0,0); /*trasparente*/
+    --TxtColor:#000;
+    
+    --footerBgColor: black;
+    --footerTxtColor: white;
+
+    --visitedLinkColor:rgb(230,12,83);
+    --linkColor:rgb(255,255,255);
+
+    --flagColor:rgb(213,103,66);
+    --flagColorTrasparent: rgba(213,103,66,0.1);
+    --fontFamily: "Roboto Condensed", sans-serif;
+}
+html{ /* metto qua lo sfondo perche in body non coprirebbe i bordi*/
+    font-size: 100%; /* definito dall'utente*/
+    font-family: var(--fontFamily);
+    line-height: 1.5em;
+    margin: auto; /* centratura per i blocchi*/
+    background-image: url(../images/bg.png);
+}
+body{/* per otenere il footer in fondo*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*100% dell'altezza del dispositivo (browser)*/
+}
+/*************************************************************
+*
+*Header (dividere il file con i commenti in modo da renderlo più mantenibile senza spezzettarlo=aumentare il tempo di caricamento come es:tucano) 
+*
+**************************************************************/
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTextColor);
+    text-align: center;
+    padding: 1em;
+}
+header h1{
+    text-indent: -999em; /*sparisce a sinistra ma esiste ancora*/
+    background-image: url(../images/logo.png);
+    background-size: contain;/*l'immagine viene ridimensionata fin che non ci sta nel box*/
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 4em;
+    line-height: 1.5em;
+    /*content: url(../images/logo.png);     SBAGLIATO!!  NON ACCESSIBILE */
+}
+/*************************************************************
+*
+*Nav bar
+*
+**************************************************************/
+.navigationHelp{
+    position: absolute; /*per non vedere l'altezza dell elemento*/
+    text-indent: -999em;
+}
+nav{
+    background-color: var(--headerBgColor);
+    color: var(--headerTextColor);
+    padding: 1em;
+}
+#menu{
+    text-align: center;
+}
+#menu ul{
+    margin:auto; /* da solo non fa niente perche centra nello spazio rimanente a destra, ma occupando tutta la pagina non ce n'è. devo dargli anche uyna dimensione e allora funziona*/
+    max-width: 1024px; /*px si possono usare. layout responsive (al contrario di width: ) */
+    list-style-type: none;/*toglie i punti della lista nel menu*/
+}
+#menu ul li{
+    display: inline-block;/* fa si che non vadano a capo*/
+    width:20%;
+    margin: 0 0.5em;/*non sarebbe meglio suddividere il restante 20%?*/
+    text-align: center;
+}
+nav a:link{
+    color: var(--linkColor);
+}
+nav a:visited{
+    color:var(--visitedLinkColor)
+}
+/********************************
+*
+*MAIN
+*
+*********************************/
+/*------- Home ------------------------------------------------------------------------------------------*/
+#imgIndex{
+    width: 80%;
+}
+main{/* spesso si da a body o main una max-width e ad html l'immagine di sfondo*/
+    background-color: var(--BgColor);
+    color: var(--TxtColor);
+    margin: auto;
+}
+main.colonne{
+    column-count: 3;
+    width: 90%;
+}
+.colonne dl{
+    font-size: 90%;
+    margin: auto;
+}
+.soldOut{ /* sbagliato mettere soldout come classe perchè soldOut non viene letto dagli screen reader, ma soprattutto perchè è un immagine di contenuto (da usare <img> ) e non c'è il testo alternativo (se ci fosse come per il titolo sarebbe corretto)*/
+    background-image: url(../images/soldout.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main.colonne dl div dt,main.colonne dl div dd{ /*classe colonne per il main*/
+    display: inline-block;
+}
+main>dl>div>dd:nth-child(2) {
+    color: var(--flagColor);
+    font-weight: bold;
+}
+main.colonne time span{
+    font-weight: bold;
+}
+/*------- Tabella -------------------------------------------------------------------------------*/
+main h2{ /* vale anche per biografia*/
+    padding: 1em;
+    text-align: center;
+    font-size:2em;
+}
+#sumTabella{ /*gli screen reader lo leggono anche con display none?*/
+    display: none;
+}
+table{
+    max-width: 1024px;
+    margin: auto;
+    border-spacing: 0px;
+    margin-top:2em;
+    margin-bottom: 2em;
+}
+table caption, thead tr{
+    background-color: var(--flagColor);
+}
+th , td{
+    padding: 0.5em;
+}
+tbody th{
+    font-weight: normal;
+}
+tbody th span{
+    font-weight: bold;
+}
+tbody tr td:nth-child(2){
+    color: var(--flagColor);
+}
+tbody tr:nth-child(odd){
+    background-color: rgba(255,255,255,0.3);
+}
+tbody tr:nth-child(even){
+    background-color: var(--flagColorTrasparent);
+}
+.soldOut{
+    height: 1.5em;
+    color:rgba(0,0,0,0);
+    background-image: url(../images/soldout.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+.disponibile{
+    height: 1.5em;
+    color:rgba(0,0,0,0);
+    background-image: url(../images/disponibile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+/*------- Biografia -------------------------------------------------------------------------------------*/
+main>p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: justify;
+    width:80%;
+}
+#imgBand{
+    content: url(../images/band.webp);
+    width: 100%;
+    margin-top: 1em;
+}
+/*------- Componenti -----------------------------------------------------------------------------------------------*/
+#componenti{
+    margin:auto;
+    width:95%;
+    max-width:1024px;
+    padding-top: 1em;
+    padding-bottom:2em;
+}
+#componenti>dt{
+    background-color: var(--flagColor);
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#componenti>dd{
+    background-color: rgb(255,255,255);
+}
+#componenti>dd img{
+    content: url(../images/RiccardoZanotti.jpg);
+    height: 8em;
+    float: left;
+    padding: 0.5em;
+}
+#componenti>dd dt{
+    font-weight: bold;
+    display: inline;
+}
+#componenti>dd dd{
+    display: inline;
+}
+#componenti>dd>dl{
+    padding:0.5em;
+    margin-bottom: 1em;
+}
+/*------- Discografia ------------------------------------------------------------------------------------------*/
+div.colonne{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1024px;
+    margin: auto;
+}
+div.colonne div{
+    width: 15em;
+    height: 15em;
+    text-indent: -999em;
+    background-image: url(../images/fuorihype.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 1em;
+}
+
+/********************************************
+*
+*Footer
+*
+*********************************************/
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding:1.0em;
+    text-align: center;
+    margin-top: auto;
+}

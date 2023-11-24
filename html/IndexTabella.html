@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <!-- VALIDATOR.W3.ORG è il validatore ufficiale, da usare ad ogni salvataggio-->
+        <meta charset="UTF-8"> <!-- deve stare nei primi caratteri altrimenti google non sa come leggere il resto -->
+        <title>Pinguini Tattici Nucleari</title>
+        <meta name="keywords" content="Pinguini Tattici Nucleari, fake news tour 2024, concerti,  "> 
+        <!-- max 25 keyword - da definire per primo nella creazione di un sito - tendenzialmente keyword più generiche sono da mettere dopo (meno importanti), ma ci sono strumenti per gli sviluppatori google che danno criteri più specifici-->
+        <meta name="description" content="Sito ufficiale dei Pinguini Tattici Nucleari, gruppo fondato da Riccardo Zanotti">
+        <!-- tutte le pagine devono avere keyword e description diverse-->
+        <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/mini.css" type="text/css" media="screen and (max-width:600px)">
+        <link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
+    </head>
+    <body>
+        <header>
+            <nav aria-label="Aiuti alla navigazione"> <!-- NECESSARIO per essere accessibile-->
+                <a class="navigationHelp" href="#content">vai al contenuto</a>
+            </nav>
+            <h1>Pinguini Tattici Nucleari</h1> <!-- poi verrà sostituito con un immagine (meglio per SEO rispetto ad un immagine con un alt siccome è la keyword principale)-->
+        </header>
+        <nav id="menu">
+            <ul>
+                <li lang="en">Home</li> <!-- metterla come link (circolare) sarebbe un errore, porta a disorientamento-->
+                <li><a href="../html/biografia.html">Biografia</a></li>
+                <li><a href="../html/componenti.html">Componenti</a></li>
+                <li><a href="../html/discografia.html">Discografia</a></li>
+            </ul>
+        </nav>
+        <nav id="breadcrumb"> <!-- molto utile per diminuire il disorientamento dell utente-->
+            <p>Ti trovi in: <span lang="en">Home</span></p>
+        </nav>
+        <main id="content">
+            <h2>Non Perdiamoci Mica di Vista - Palasport 2024</h2>
+            <p>per maggiori informazioni o per acquistare il tuo biglietto visita 
+                <a lang="en" href="https://www.ticketone.it/artist/pinguini-tattici-nucleari/">Ticketone</a>.
+            </p>
+            <p id="sumTabella">la tabella contiene tutte le date dei prossimi concerti con il luogo dove si terranno e la disponibiltà o meno dei biglietti in vendita</p>
+            <table aria-describedby="sumTabella"><!-- più leggibile, ma più scroll-->
+                <caption>I prossimi concerti</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">DATA</th>
+                        <th scope="col">CITTÀ</th>
+                        <th scope="col">LUOGO</th>
+                        <th scope="col">BIGLIETTI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!-- è l'intestazione della riga, l'id -->
+                        <td data-title:"Città">Jesolo (<abbr title="Venezia">VE</abbr>)</td> <!-- td e non th perchè da solo questo dato non mi dice nulla-->
+                        <td data-title:"Luogo">Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut">No</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                        <td data-title:"Città" >Jesolo(<abbr title="Venezia">VE</abbr>)</td>
+                        <td data-title:"Luogo" >Palazzo del Turismo</td>
+                        <td data-title:"disponibilità_biglietti" class="soldOut" >No</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <p>Michele Nesler - <span lang="en">All right reserved.</span></p><!-- lo span specifica il cambio lingua-->
+        </footer>
+    </body>
+</html>

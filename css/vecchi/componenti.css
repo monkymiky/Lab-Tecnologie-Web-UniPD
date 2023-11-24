@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --headerBgColor: #000; /*e altre variabili globali*/
+    --headerTextColor: #FFF;
+
+    --BgColor: rgba(0,0,0,0); /*trasparente*/
+    --TxtColor:#000;
+    
+    --footerBgColor: black;
+    --footerTxtColor: white;
+
+    --visitedLinkColor:rgb(230,12,83);
+    --linkColor:rgb(255,255,255);
+
+    --flagColor:rgb(213,103,66);
+    --fontFamily: "Roboto Condensed", sans-serif;
+}
+html{ /* metto qua lo sfondo perche in body non coprirebbe i bordi*/
+    font-size: 100%; /* definito dall'utente*/
+    font-family: var(--fontFamily);
+    line-height: 1.5em;
+    margin: auto; /* centratura per i blocchi*/
+    background-image: url(../images/bg.png);
+}
+
+/*************************************************************
+*
+*Header (dividere il file con i commenti in modo da renderlo più mantenibile senza spezzettarlo=aumentare il tempo di caricamento come es:tucano) 
+*
+**************************************************************/
+body{/* per otenere il footer in fondo*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*100% dell'altezza del dispositivo (browser)*/
+}
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTextColor);
+    text-align: center;
+    padding: 1em;
+}
+header h1{
+    content: url(../images/logo.png);
+    width: 10%;
+    margin: auto;
+}
+/*************************************************************
+*
+*Nav bar
+*
+**************************************************************/
+nav{
+    background-color: var(--headerBgColor);
+    color: var(--headerTextColor);
+    padding: 1em;
+}
+#menu{
+    text-align: center;
+}
+#menu ul{
+    margin:auto; /* da solo non fa niente perche centra nello spazio rimanente a destra, ma occupando tutta la pagina non ce n'è. devo dargli anche uyna dimensione e allora funziona*/
+    max-width: 1024px; /*px si possono usare. layout responsive (al contrario di width: ) */
+    list-style-type: none;/*toglie i punti della lista nel menu*/
+}
+#menu ul li{
+    display: inline-block;/* fa si che non vadano a capo*/
+    width:20%;
+    margin: 0 0.5em;/*non sarebbe meglio suddividere il restante 20%?*/
+    text-align: center;
+}
+nav a:link{
+    color: var(--linkColor);
+}
+nav a:visited{
+    color:var(--visitedLinkColor)
+}
+/********************************
+*
+*main
+*
+*********************************/
+main {
+    max-width: 1024px;
+    width: 80%;
+    margin: auto;
+}
+main h2{
+    text-align:center;
+    margin:1em;
+    font-size:2em;}
+main>dl{
+    width: 100%;
+    margin:1em;
+}
+main>dl>dt{
+    background-color: var(--flagColor);
+    padding: 0.5em;
+    font-weight: bold;
+}
+main>dl>dd{
+    background-color: rgb(255,255,255);
+}
+main>dl>dd div>dt{
+    font-weight: bold;
+    display: inline;
+}
+main>dl>dd div>dd{
+    display: inline;
+}
+main>dl>dd>dl{padding:0.5em;}
+.RiccardoZ{
+    content: url(../images/RiccardoZanotti.jpg);
+    height: 8em;
+    float: left;
+    padding: 0.5em;
+}
+
+/********************************************
+*
+*Footer
+*
+*********************************************/
+footer{ /* in questo momento se ci fosse poco contenuto il footer sarebbe a metà dello schermo BRUTTO!! */
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding:1.0em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+/***********************************************
+*
+*COMPONENTI 
+*
+*************************************************/
+
+#componenti{
+    margin:auto;
+    width:95%;
+    max-width:1024px;
+    padding-top: 1em;
+    padding-bottom:2em;
+}
+.componente>dt{
+    background-color: var(--);
+    color: var(--);
+    border: 1px solid black;
+    padding: 0.5 em;
+    font-size: 1.1em;
+}
+#componenti>dd{
+    background-color: var(--);
+    border: 1px solid black;
+    border-top:none;
+    padding:0.5em;
+    margin-bottom:1em;
+}
+#componenti>dd img{
+    width:15%;
+    float:left;
+    margin-right: 1em;
+}
+.componente dt{
+    float:left;
+    font-weight: bold;
+}

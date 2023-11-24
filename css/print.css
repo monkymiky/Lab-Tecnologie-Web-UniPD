@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --headerBgColor: #000; /*e altre variabili globali*/
+    --headerTextColor: #FFF;
+
+    --BgColor: rgba(0,0,0,0); /*trasparente*/
+    --TxtColor:#000;
+    
+    --footerBgColor: black;
+    --footerTxtColor: white;
+
+    --visitedLinkColor:rgb(230,12,83);
+    --linkColor:rgb(255,255,255);
+
+    --flagColor:rgb(213,103,66);
+    --fontFamily: "Roboto Condensed", sans-serif;
+}
+html{ 
+    font-size: 12pt; 
+    font-family: 'Times New Roman', serif;
+    line-height: 1em;
+    margin: auto; 
+}
+header{
+    text-align: left; /*meglio che center in generale*/
+    padding: 1em 0 1em 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+header h1{
+    content: url(../images/logo.png);/*rimuove (no screen reader) il testo e sostituisce con l'imagine*/
+    width:4cm;
+    /* ho biogno di invertire i colori dell immagine - o creo un altra immagine oppure sotto */
+    filter:invert(100%);/*MOLTO NUOVO suporto relativo*/
+    margin: auto;
+}
+#menu {display: none;}/*non ha senso stambarlo visto che non si può usare*/
+#breadcrumb{
+    padding: 0.5em 0 0.5em 0;
+    margin-top: 0.5em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+#imgIndex{
+    float: left;
+    width: 20%;
+}
+main>dl{
+    margin-left:22%;
+}
+main.colonne{
+    width: 78%;
+}
+.colonne dl{
+    margin: auto;
+}
+main.colonne dl div dt,main.colonne dl div dd{ /*classe colonne per il main*/
+    display: inline-block;
+}
+main.colonne dl div dt{
+    font-weight: bold;
+}
+main.colonne div>*:not(:last-child)::after{ /*prende tutti i figli diretti del div a parte l'ultimo e aggiunge content dopo*/
+    content:" - ";
+}
+main.colonne div>*:last-child ::after{
+    content:" biglietti disponibili";
+}
+main.colonne div.soldout ::after {
+    content: "biglietti esauriti"
+}
+main.colonne time span{
+    font-weight: bold;
+}
+footer{
+    padding: 1.3em 0.5em 0.5em; /*alto destra&sinistra basso */
+    margin-top: 0.5em;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+}

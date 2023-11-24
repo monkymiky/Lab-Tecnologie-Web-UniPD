@@ -1,0 +1,16 @@
+total validator
+
+colorally
+alt immagini
+
+link circolari ( usabilità non accessibilità)
+link rotti ( usabilità non accessibilità)
+alt
+sottotitoli video audio
+controllo colori
+
+fieldset span o div nel form e poi dentro il tag input altrimenti errore
+
+
+
+nesler
