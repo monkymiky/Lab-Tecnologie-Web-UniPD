@@ -1,4 +1,0 @@
-li per discografia
-font size e display block per image replacement 
-
-hover{ transition 0.5s; filter grayscale 100%;}

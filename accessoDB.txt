@@ -1,0 +1,8 @@
+accedere al db ---> mysql -u mnesler -p
+eseguire il file .sql --> source file.sql
+
+host = localhost
+db = mnesler
+username = mnesler
+password = Feif1eeng2Ea7nei
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiungi Traccia - Pinguini Tattici Nucleari</title>
+
+    <meta name="description" content="Questa pagina è dedicata all'aggiunta di una nuova traccia ad un album.">
+    <meta name="keywords" content="pinguini tattici nucleari, album, nuova traccia">
+    <meta name="author" content="Mirko Franco, Ombretta Gaggi">
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="handheld, screen">
+    <link rel="stylesheet" type="text/css" href="mini.css" media="handheld, screen and (max-width:600px),
+            only screen and (max-device-width:600px)">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link rel="shortcut icon" type="image/png" href="images/icon-penguin.png">
+</head>
+<body> 
+
+<header id="header">
+    <nav aria-label="Aiuti alla navigazione">
+        <a class="navigationHelp" href="#content">Vai al contenuto</a>
+    </nav>
+    <h1>Pinguini Tattici Nucleari</h1>
+</header>
+
+<nav id="menu" aria-label="site menu">
+    <a class="navigationHelp" href="#content">Salta il menù di navigazione</a>
+    <ul>
+        <li><a href="index.html"><span lang="en">Home</span></a></li>
+        <li><a href="biografia.html">Biografia</a></li>
+        <li><a href="componenti.html">Componenti</a></li>
+        <li><a href="discografia.php">Discografia</a></li>
+    </ul>
+</nav>
+
+<nav id="breadcrumb" aria-label="Percorso">
+    <p>Ti trovi in: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Aggiungi Traccia</p>
+</nav>
+
+<main id="content">
+    <section id="sectionAggiungiBrano">
+        <h2>Inserisci una nuova traccia</h2>
+        <form method="post" action="aggiungiTraccia.php"> 
+            {messaggiForm}
+            <fieldset>
+                <legend>Album</legend>
+                <label for="album">Seleziona l'album: </label>
+                <select id="album" name="album" required="required">
+                    {listaAlbum}
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni sulla traccia</legend>
+                <label for="titolo">Titolo: </label>
+                <input type="text" name="titolo" id="titolo" value="{valoreTitolo}"/><br/>
+                <label for="durata">Durata: </label>
+                <input type="time" name="durata" id="durata" min="00:01" max="10:00" value="{valoreDurata}" required="required"/>
+            </fieldset>
+            <fieldset>
+                <legend>Contenuto Esplicito</legend>
+                <label for="rYes">Si</label>
+                <input type="radio" name="esplicito" id="rYes" value="Yes" {checkedYes}/>
+                <label for="rNo">No</label>
+                <input type="radio" name="esplicito" id="rNo" value="No" {checkedNo}/>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni aggiuntive</legend>
+                <label for="dataRadio">Data del primo passaggio in radio: </label>
+                <input type="date" name="dataRadio" id="dataRadio" value="{valoreData}"/><br/>
+                <label for="urlVideo">URL del video: </label>
+                <input type="text" name="urlVideo" id="urlVideo"/><br/>
+                <label for="note">Note: </label>
+                <input type="text" name="note" id="note"/>
+            </fieldset>
+            <fieldset>
+                <legend>Bottoni</legend>
+                <input type="submit" id="submit" name="submit" value="Inserisci traccia"/>
+                <input type="reset" id="reset" value="Cancella tutto"/>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Mirko Franco &amp; Ombretta Gaggi - <span lang="en">All rights reserved.</span></p>
+</footer>
+
+</body>
+</html>

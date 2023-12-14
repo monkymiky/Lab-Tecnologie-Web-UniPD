@@ -249,7 +249,7 @@ main>p{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    text-indent: -999px;
+    text-indent: -9999px;
     overflow: hidden;
     font-size: 7em;
     line-height: 1.5em;
@@ -265,6 +265,7 @@ main>p{
 .FuoriDallHype{
     background-image: url(../images/fuorihype.jpg);
 }
+
 /********************************************
 *
 *Footer

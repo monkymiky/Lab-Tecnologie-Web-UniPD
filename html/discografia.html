@@ -3,22 +3,23 @@
     <head>
         <!-- VALIDATOR.W3.ORG è il validatore ufficiale, da usare ad ogni salvataggio-->
         <meta charset="UTF-8"> <!-- deve stare nei primi caratteri altrimenti google non sa come leggere il resto -->
-        <title>Pinguini Tattici Nucleari</title>
-        <meta name="keywords" content="Pinguini Tattici Nucleari, Band, Biografia, Riccardo Zanotti,Elio 
-        Biffi, Nicola Buttafuoco, Matteo Locati, Simone Pagani,Lorenzo Pasini,Il re è nudo, Diamo un calcio 
-        all'Aldilà, etc.."> 
-        <!-- max 25 keyword - da definire per primo nella creazione di un sito - tendenzialmente keyword più generiche sono da mettere dopo (meno importanti), ma ci sono strumenti per gli sviluppatori google che danno criteri più specifici-->
-        <meta name="description" content="La storia della Band raccontata dai suoi membri">
-        <!-- tutte le pagine devono avere keyword e description diverse-->
+        <title>Discografia &minus; Pinguini Tattici Nucleari</title>
+        <meta name="description" content="Questa pagina presenta la discografia dei pinguini tattici nucleari.">
+        <meta name="keywords" content="Fake News, Ahia!, Fuori dall'Hype, Gioventù Brucata, Diamo un calcio all'aldilà, Il re è nudo, Pinguini tattici Nucleari">
         <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
         <link rel="stylesheet" href="../css/mini.css" type="text/css" media="screen and (max-width:600px)">
         <link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
+        <link rel="shortcut icon" type="image/png" href="images/icon-penguin.png">
     </head>
     <body>
         <header>
+            <nav aria-label="Aiuti alla navigazione">
+                <a class="navigationHelp" href="#content">Vai al contenuto</a>
+            </nav>
             <h1>Pinguini Tattici Nucleari</h1> <!-- poi verrà sostituito con un immagine (meglio per SEO rispetto ad un immagine con un alt siccome è la keyword principale)-->
         </header>
-        <nav id="menu">
+        <nav id="menu" aria-label="menu sito">
+            <a class="navigationHelp" href="#content">Salta il menù di navigazione</a>
             <ul>
                 <li lang="en"><a href="../html/Index.html">Home</a></li> <!-- metterla come link (circolare) sarebbe un errore, porta a disorientamento-->
                 <li><a href="biografia.html">Biografia</a></li>
@@ -31,8 +32,10 @@
         </nav>
         <main id="content">
             <h2>Discografia</h2>
-            <p>clicca sulle copertine per scoprire tutti i dettagli</p>
+            <p>Clicca sulla copertina dell'<span lang="en">album</span> per scoprire la  <span lang="en">tracklist</span> e tutti i dettagli.</p>
             <ul  id="discografia" aria-label="lista degli album">
+                {album}
+                <!--li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
@@ -41,8 +44,7 @@
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
                 <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
-                <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
-                <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li>
+                <li><a href="" class="FuoriDallHype"> Fuori dall'<span lang="en">Hype</span></a></li-->
             </ul>
         </main>
         <footer>
