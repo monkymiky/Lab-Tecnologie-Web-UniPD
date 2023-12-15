@@ -74,5 +74,13 @@
                 return null;
             }
         }
+
+        public function insertNewTrack($album, $titolo, $durata, $esplicito, $dataRadio, $urlVideo, $note){ //NULLIF($variabile, "stringa") inserisce NULL se la variabile è uguale alla stringa 
+            $queryInsert = "INSERT INTO Traccia (Titolo, Durata, Esplicito,URLVideo, DataRadio, Album, Note)
+                            VALUES (\"$titolo\", \"$durata\", \"$esplicito\", NULLIF(\"$urlVideo\", \"\"), 
+                             NULLIF(\"$dataRadio\",\"\"), \"$titolo\", $album, NULLIF(\"$note\",\"\");";
+            mysqli_query($this->connection, $queryInsert) or die(mysqli_error($this->connection));
+            return mysqli_affected_rows($this->connection) >0;
+        }
     }
 ?>

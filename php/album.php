@@ -23,11 +23,19 @@
             </dd><dt>Data di uscita: </dt><dd><time datetime=\"".$infoAlbum[2]."\">". date("j F Y", strtotime($infoAlbum[2])). "</time></dd>";
             $tracce = $connection ->getTracceAlbum($idAlbum);
             if($tracce!=null){
-                $stringaAlbum .= "<dl>";
+
+                $stringaAlbum .= "<dd> <ol> id=\"tracklist\">";
                 foreach($tracce as $traccia){
-                    $stringaAlbum .= "<dh>".$traccia['Titolo']."</dh><dd>".$traccia['Esplicito']."</dd><dd>".$traccia['Durata']."</dd><dd>".$traccia['DataRadio']."</dd><dd>".$traccia['URLVideo']."</dd>";
+                    $stringaAlbum .= "<li>".$traccia['Titolo']." (".$traccia['Durata'].")";
+                    if ($traccia['Esplicito'] == 1){
+                        $stringaAlbum .= " - E ";
+                    }
+                    if($traccia['URLVideo'] != NULL){
+                        $stringaAlbum .= " - <a href=\"".$traccia['URLVideo']."\">Guarda il video</a>";
+                    }
+                    $stringaAlbum .= "</li>";
                 }
-                $stringaAlbum .= "</dl>";
+                $stringaAlbum .= "</ol></dd></dl>";
             } else {
                 $stringaAlbum = "<p>Non sono presenti brani per questo album</p>";
             }
