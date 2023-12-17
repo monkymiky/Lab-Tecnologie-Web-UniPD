@@ -26,10 +26,10 @@
 <nav id="menu" aria-label="site menu">
     <a class="navigationHelp" href="#content">Salta il menù di navigazione</a>
     <ul>
-        <li><a href="index.html"><span lang="en">Home</span></a></li>
-        <li><a href="biografia.html">Biografia</a></li>
-        <li><a href="componenti.html">Componenti</a></li>
-        <li><a href="discografia.php">Discografia</a></li>
+        <li><a href="../html/Index.html"><span lang="en">Home</span></a></li>
+        <li><a href="../html/biografia.html">Biografia</a></li>
+        <li><a href="../html/componenti.html">Componenti</a></li>
+        <li><a href="../php/discografia.php">Discografia</a></li>
     </ul>
 </nav>
 
@@ -52,25 +52,25 @@
             <fieldset>
                 <legend>Informazioni sulla traccia</legend>
                 <label for="titolo">Titolo: </label>
-                <input type="text" name="titolo" id="titolo" value="{valoreTitolo}"/><br/>
+                <input type="text" name="titolo" id="titolo" value="{titolo}"/><br/>
                 <label for="durata">Durata: </label>
-                <input type="time" name="durata" id="durata" min="00:01" max="10:00" value="{valoreDurata}" required="required"/>
+                <input type="time" name="durata" id="durata" min="00:01" max="10:00" value="{durata}" required="required"/>
             </fieldset>
             <fieldset>
                 <legend>Contenuto Esplicito</legend>
                 <label for="rYes">Si</label>
-                <input type="radio" name="esplicito" id="rYes" value="Yes" {checkedYes}/>
+                <input type="radio" name="esplicito" id="rYes" value="1" {checkedYes}/>
                 <label for="rNo">No</label>
-                <input type="radio" name="esplicito" id="rNo" value="No" {checkedNo}/>
+                <input type="radio" name="esplicito" id="rNo" value="0" {checkedNo}/>
             </fieldset>
             <fieldset>
                 <legend>Informazioni aggiuntive</legend>
                 <label for="dataRadio">Data del primo passaggio in radio: </label>
-                <input type="date" name="dataRadio" id="dataRadio" value="{valoreData}"/><br/>
+                <input type="date" name="dataRadio" id="dataRadio" value="{data}"/><br/>
                 <label for="urlVideo">URL del video: </label>
-                <input type="text" name="urlVideo" id="urlVideo"/><br/>
+                <input type="text" name="urlVideo" id="urlVideo" value="{urlvideo}"/><br/>
                 <label for="note">Note: </label>
-                <input type="text" name="note" id="note"/>
+                <input type="text" name="note" id="note" value="{note}"/>
             </fieldset>
             <fieldset>
                 <legend>Bottoni</legend>
