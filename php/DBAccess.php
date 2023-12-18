@@ -86,7 +86,10 @@
                             $album,
                             NULLIF(\"$note\",\"\")
                             );";
-            mysqli_query($this->connection, $queryInsert) or die(mysqli_error($this->connection));
+            try{mysqli_query($this->connection, $queryInsert);}
+            catch(Exception $ex){
+                echo "Exception:" . $exception->getMessage(). "mysqli error : ". mysqli_error($this->connection); // forse è una ripetizione?
+            }
             return mysqli_affected_rows($this->connection) >0;
         }
     }
