@@ -38,27 +38,27 @@ if(isset($_POST['submit'])){
 	if(isset($_POST['titolo'])){
 		pulisciInput($_POST['titolo']);
 		if(strlen($_POST['titolo'])<4){
-			$messaggiForm .= "<p> il campo titolo deve essere lungo almeno 4 caratteri <p>";
+			$messaggiForm .= "<p> il campo titolo deve essere lungo almeno 4 caratteri </p>";
 		}else{
 			$titolo = $_POST['titolo'];
 		}
 	}else{
-		$messaggiForm .= "<p> il campo titolo deve essere riempito <p>";
+		$messaggiForm .= "<p> il campo titolo deve essere riempito </p>";
 	}
 
 	if(isset($_POST['durata'])){
-		pulisciInput($_POST['durata']);
+		trim($_POST['durata']);
 		if(!preg_match("/[0-9][0-9]:[0-9][0-9]/", $_POST['durata'])){
-			$messaggiForm .= "<p> il campo durata deve contenere 2 numeri seguiti da ':' e poi da altri 2 numeri";
+			$messaggiForm .= "<p> il campo durata deve contenere 2 numeri seguiti da ':' e poi da altri 2 numeri</p>";
 		}else{
 			$durata=$_POST['durata'];
 		}
 	}else{
-		$messaggiForm .= "<p> il campo durata deve essere riempito <p>";
+		$messaggiForm .= "<p> il campo durata deve essere riempito </p>";
 	}
 
 	if(!isset($_POST['esplicito']) || filter_input(INPUT_POST,$_POST['esplicito'], FILTER_VALIDATE_BOOLEAN )){
-		$messaggiForm .= "<p> il campo esplicito deve essere specificato <p>";
+		$messaggiForm .= "<p> il campo esplicito deve essere specificato </p>";
 	}else{
 		if($_POST['esplicito'] == "1"){
 			$checkedYes = "checked";
@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
 	if(isset($_POST['dataRadio']) && $_POST['dataRadio'] =! 1){ // non so perche esca 1 come valore se non impostato... forse value="" viene sostituito con 1 ?
 		pulisciInput($_POST['dataRadio']);
 		if(!preg_match("/(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[1,2])\/(19|20)\d{2}/", $_POST['dataRadio'])){ // febbraio da 28 gg non è considerato
-			$messaggiForm .= "<p> il campo data deve essere nel formato gg/mm/aaaa   ->".$_POST['dataRadio'];
+			$messaggiForm .= "<p> il campo data deve essere nel formato gg/mm/aaaa </p>";
 		}else{
 			$data = $_POST['dataRadio'];
 		}
@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
 
 	if(isset($_POST['urlVideo']) && $_POST['urlVideo'] =! 1 ){ // non so perche esca 1 come valore se non impostato... forse value="" viene sostituito con 1 ?
 		if(!filter_input(INPUT_POST,$_POST['urlVideo'], FILTER_VALIDATE_URL )){
-			$messaggiForm .= "<p>L'URL inserito non è in un formato valido <p> ->".$_POST['urlVideo'];
+			$messaggiForm .= "<p>L'URL inserito non è in un formato valido </p> ";
 		}else{
 			$urlvideo = $_POST['urlVideo'];
 		}
@@ -92,7 +92,7 @@ if(isset($_POST['submit'])){
 		pulisciInput($_POST['album']);
 		$albumStringa = $_POST['album'];
 	}else{
-		$messaggiForm .= "<p> deve essere selezionato un album <p>";
+		$messaggiForm .= "<p> deve essere selezionato un album </p>";
 	}
 	
 	if(isset($_POST['note'])){
@@ -135,7 +135,7 @@ if($connectionOK){
 			$note = "";
 			$checkedYes ="";
 			$checkedNo ="";
-			$messaggiForm .= "<p>INSERIMENTO AVVENUTO CON SUCCESSO<p><p>è possibile inserire un'ulteriore nuova traccia<p> ";
+			$messaggiForm .= "<p>INSERIMENTO AVVENUTO CON SUCCESSO</p><p>è possibile inserire un'ulteriore nuova traccia</p> ";
 		}
 	}
 }
